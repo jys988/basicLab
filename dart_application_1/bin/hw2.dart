@@ -27,8 +27,11 @@ void main() {
 
   String strTable = '이름  국어  영어  수학  평균';
   print(strTable);
-
+  //print("이름,  국어,  영어,  수학,  평균")
   for (int i = 0; i < 10; i++) {
+    //double avg = (aList[i].kor + aList[i].eng + aList[i].math) / 3.0;
+    //aList[i].avg = avg;
+    
     aList[i].setAvg();
     print(aList[i].name.padLeft(4) +
         aList[i].kor.toString().padLeft(5) +
@@ -39,7 +42,7 @@ void main() {
 
   print("평균으로 정렬");
   print(strTable + " 비고");
-
+  //print("이름,  국어,  영어,  수학,  평균,   비고")
   List newList = List.from(aList);
   newList.sort((a, b) => a.avg.compareTo(b.avg));
 
